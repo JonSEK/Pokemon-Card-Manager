@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.navbar>div {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.25rem;
+  /* 100px */
+  background-color: #f0f0f0;
+  /* a light grey shade */
+  font-size: 1.5625rem;
+  /* 25px */
+  width: 100%;
+  /* Ensures the navbar spans the full width */
+}
+
+.navbar p {
+  margin-left: 1.5625rem;
+  white-space: nowrap;
+  /* 50px */
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-right: 1.5625rem;
+}
+
+.signin-btn {
+  width: 6.25rem;
+  height: 3.125rem;
+  font-size: 1.5625rem;
+  margin-right: 1.5625rem;
+  border-radius: 0.625rem;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  height: 60vh;
+}
+
+.title {
+  font-size: 50px;
+  white-space: nowrap;
+}
+
+.search-input-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: relative;
+  left: 30px;
+  margin-left: -15px;
+  color: #cccccc;
+  z-index: 1;
+  font-size: 15px;
+}
+
+.search-bar {
+  width: 100%;
+  /* Make the width of the search bar responsive */
+  max-width: 600px;
+  /* But don't let it get wider than 600px */
+  height: 50px;
+  border-radius: 25px;
+  font-size: 25px;
+  padding-left: 50px;
+  border: 1px solid #cccccc;
+}
+
+.search-bar::placeholder {
+  color: #cccccc;
+}
+
+.search-bar:hover {
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
+}
+
+.search-bar:focus {
+  outline: none;
+  border: 1px solid #cccccc;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 100px;
+  padding-top: 15px;
+}
+
+.search-button,
+.advanced-button {
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  border: none;
+  color: #000000;
+}
+
+.search-button:hover,
+.advanced-button:hover {
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
+}
+
+.nav-bar {
+  display: none;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 245px);
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 245px;
+  height: 342px;
+  border-radius: 15px;
+  overflow: hidden;
+  justify-self: center;
+}
