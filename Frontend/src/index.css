@@ -14,13 +14,21 @@ body {
   width: 100%;
 }
 
-.navbar>div {
+body,
+html {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header>div {
   display: flex;
   align-items: center;
   gap: 25px;
 }
 
-.navbar {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,14 +41,18 @@ body {
   width: 100%;
   /* Ensures the navbar spans the full width */
 }
+.header a {
+  text-decoration: none;
+  color: black;
+}
 
-.navbar p {
+.header p {
   margin-left: 1.5625rem;
   white-space: nowrap;
   /* 50px */
 }
 
-.navbar ul {
+.header ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +60,7 @@ body {
   padding: 0;
 }
 
-.navbar ul li {
+.header ul li {
   margin-right: 1.5625rem;
 }
 
@@ -151,7 +163,7 @@ body {
   border-color: rgba(223, 225, 229, 0);
 }
 
-.nav-bar {
+.display-none {
   display: none;
 }
 
@@ -168,5 +180,17 @@ body {
   height: 342px;
   border-radius: 15px;
   overflow: hidden;
-  justify-self: center;
+}
+
+.selected-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.selected-card img {
+  width: 490px;
+  height: 684px;
 }

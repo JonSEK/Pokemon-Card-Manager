@@ -1,7 +1,5 @@
 import React from "react";
 
-const SignInButton = () => {
+export default function SignInButton() {
   return <button className="signin-btn">Sign In</button>;
-};
-
-export default SignInButton;
+}

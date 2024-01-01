@@ -4,7 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { getPokemonCards } from "../services/api";
 import { useNavigate } from "react-router-dom";
 
-const SearchBar = ({ inNavBar }) => {
+export default function SearchBar({ inHeader }) {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
@@ -36,7 +36,7 @@ const SearchBar = ({ inNavBar }) => {
           className="search-bar"
         />
       </div>
-      <div className={`button-row ${inNavBar ? "nav-bar" : ""}`}>
+      <div className={`button-row ${inHeader ? "display-none" : ""}`}>
         <button className="search-button" type="submit">
           Search
         </button>
@@ -50,6 +50,4 @@ const SearchBar = ({ inNavBar }) => {
       </div>
     </form>
   );
-};
-
-export default SearchBar;
+}
