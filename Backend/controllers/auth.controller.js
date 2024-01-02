@@ -1,6 +1,7 @@
 import e from "express";
 import User from "../models/user.model.js";
 import bcrypt from "bcrypt";
+import { errorHandler } from "../utils/error.js";
 
 export const signup = async (req, res) => {
   const { username, email, password } = req.body;
@@ -17,6 +18,6 @@ export const signup = async (req, res) => {
       message: "User created successfully!",
     });
   } catch (error) {
-    res.status(500).json(error.message);
+    next(error);
   }
 };
