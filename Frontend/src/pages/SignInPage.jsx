@@ -35,7 +35,11 @@ export default function SignIn() {
       navigate("/");
     } catch (error) {
       setLoading(false);
-      setError(error.response?.data?.message || error.message);
+      if (error.response.status === 400) {
+        setError(error.response.data.error);
+      } else {
+        setError(error.response?.data?.message || error.message);
+      }
     }
   };
 
